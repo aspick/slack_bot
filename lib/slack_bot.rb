@@ -38,13 +38,8 @@ module SlackBot
     yield self if block_given?
   end
 
-<<<<<<< HEAD
-  def self.notify(body: SlackBot.body, bot_name: SlackBot.bot_name, channel: SlackBot.channel)
-    SlackBot::Notify.execute(body, bot_name, channel)
-=======
   def self.notify(body: SlackBot.body, bot_name: SlackBot.bot_name,
     channel: SlackBot.channel, icon_url: SlackBot.icon_url)
-    Notify.execute(body, bot_name, channel, icon_url)
->>>>>>> kidach1/master
+    SlackBot::Notify.execute(body, bot_name, channel, icon_url)
   end
 end
